@@ -1,0 +1,236 @@
+@import './animation';
+
+#app,
+html,
+body {
+  height: 100%;
+}
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote,/* structural elements 结构元素 */
+dl, dt, dd, ul, ol, li, /* currencyList elements 列表元素 */
+pre, /* text formatting elements 文本格式元素 */
+fieldset, button, input, textarea, /* form elements 表单元素 */
+th, td {
+  /* table elements 表格元素 */
+  margin: 0;
+  padding: 0;
+}
+/* 设置默认字体 */
+body,
+button,
+input,
+select,
+textarea {
+  /* for ie */
+  /*font: 12px/1 Tahoma, Helvetica, Arial, "宋体", sans-serif;*/
+  font: 12px/1 Tahoma, Helvetica, Arial, '\5b8b\4f53', sans-serif; /* 用 ascii 字符表示，使得在任何编码下都无问题 */
+}
+
+h1 {
+  font-size: 18px; /* 18px / 12px = 1.5 */
+}
+h2 {
+  font-size: 16px;
+}
+h3 {
+  font-size: 14px;
+}
+h4,
+h5,
+h6 {
+  font-size: 100%;
+}
+
+address,
+cite,
+dfn,
+em,
+var {
+  font-style: normal;
+} /* 将斜体扶正 */
+code,
+kbd,
+pre,
+samp,
+tt {
+  font-family: 'Courier New', Courier, monospace;
+} /* 统一等宽字体 */
+small {
+  font-size: 12px;
+} /* 小于 12px 的中文很难阅读，让 small 正常化 */
+
+/* 重置列表元素 */
+ul,
+ol {
+  list-style: none;
+}
+
+/* 重置文本格式元素 */
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+abbr[title],
+acronym[title] {
+  /* 注：1.ie6 不支持 abbr; 2.这里用了属性选择符，ie6 下无效果 */
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+q:before,
+q:after {
+  content: '';
+}
+
+/* 重置表单元素 */
+legend {
+  color: #000;
+} /* for ie6 */
+fieldset,
+img {
+  border: none;
+} /* img 搭车：让链接里的 img 无边框 */
+/* 注：optgroup 无法扶正 */
+button,
+input,
+select,
+textarea {
+  font-size: 100%; /* 使得表单元素在 ie 下能继承字体大小 */
+}
+
+/* 重置表格元素 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 重置 hr */
+hr {
+  border: none;
+  height: 1px;
+}
+
+// ************************部分全局样式
+
+.content_view_box {
+  width: 100%;
+  padding: 0 20px 100px 20px;
+  box-sizing: border-box;
+  .header_title {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #9ea7b3;
+  }
+}
+body {
+  min-width: 1200px;
+}
+
+.filter {
+  margin: 20px auto 0;
+}
+
+.footer {
+  margin-top: 20px;
+  text-align: right;
+}
+
+//elementui样式
+/*选择*/
+.el-select .el-input {
+  width: 130px;
+}
+.input-with-select .el-input-group__prepend {
+  background-color: #fff;
+}
+.input-with-select > .el-input__inner {
+  width: 320px;
+}
+
+/*table样式*/
+.demo-table-expand {
+  font-size: 0;
+}
+.demo-table-expand label {
+  width: 90px;
+  color: #99a9bf;
+}
+.demo-table-expand .el-form-item {
+  margin-right: 0;
+  margin-bottom: 0;
+  width: 50%;
+}
+
+//菜单1、2级颜色区分
+.el-menu-item {
+  background: #1f2d3d !important;
+}
+.el-menu-item:hover {
+  background-color: #001528 !important;
+}
+.el-menu-item.is-active {
+  background-color: #011528 !important;
+}
+
+// 卡片头部
+.el-card {
+  margin-top: 20px;
+}
+.el-card__header {
+  background-color: rgb(48, 65, 86);
+  color: #fff;
+}
+
+.add_task {
+  float: right;
+  margin: 10px 0 20px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.flexAC {
+  display: flex;
+  align-items: center;
+  .el-radio__label {
+    display: flex;
+    align-items: center;
+  }
+}
+.phoneSelect {
+  .el-input--suffix {
+    width: auto;
+  }
+  
+  .el-select {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .el-input-group__prepend {
+    padding: 0 !important;
+  }
+}
+.el-switch__label {
+  color: #909399;
+}
+
+// 
+.mr-10 {
+  margin-right: 10px;
+}
+.ml-10 {
+  margin-left: 10px;
+}
+.mt-10 {
+  margin-top: 10px;
+}
+.mb-10 {
+  margin-bottom: 10px;
+}
