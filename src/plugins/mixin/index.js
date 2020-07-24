@@ -48,8 +48,12 @@ export default {
         return json
       }
       json = json.trim()
-      if (json.startsWith('{') && json.endsWith('}')) {
-        return '<pre style="line-height: 18px; color: black;">' + JSON.stringify(JSON.parse(json), null, 2) + '</pre>'
+      try {
+        if (json.startsWith('{') && json.endsWith('}')) {
+          return '<pre style="line-height: 18px; color: black;">' + JSON.stringify(JSON.parse(json), null, 2) + '</pre>'
+        }
+      } catch (e) {
+        console.log(e)
       }
       return json
     },

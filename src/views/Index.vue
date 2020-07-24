@@ -119,7 +119,7 @@ export default {
     to (path, name) {
       if (path) return { path }
       else return { name }
-    }
+    },
     // 导航数据分组
     group (arr) {
       let map = {}
